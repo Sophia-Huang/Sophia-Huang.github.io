@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/09/02/LintCode_0002_%E5%B0%BE%E9%83%A8%E7%9A%84%E9%9B%B6/</loc>
+    
+    <lastmod>2018-09-02T14:17:53.005Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/09/02/LintCode_0073_%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86%E5%92%8C%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E6%A0%91%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91/</loc>
     
     <lastmod>2018-09-02T14:00:24.764Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>http://yoursite.com/2018/09/02/LintCode_0006_%E5%90%88%E5%B9%B6%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/</loc>
     
     <lastmod>2018-09-02T07:51:10.882Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/09/02/LintCode_0002_%E5%B0%BE%E9%83%A8%E7%9A%84%E9%9B%B6/</loc>
-    
-    <lastmod>2018-09-02T06:41:46.758Z</lastmod>
     
   </url>
   
