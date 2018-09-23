@@ -146,6 +146,110 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-机器学习训练营-任务清单" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/23/机器学习训练营-任务清单/">机器学习训练营|任务清单</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/23/机器学习训练营-任务清单/" class="archive-article-date">
+  	<time datetime="2018-09-23T01:54:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-23</time>
+</a>
+		
+        
+          <div style="margin-top:6px;color:#ABABAB">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">18字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1分</span>
+      </span>
+    </span>
+</div>
+          
+      </header>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="08-16"><a href="#08-16" class="headerlink" title="08.16"></a>08.16</h4><ul>
+<li>语音直播：机器学习的应用及理论分类
+
+	<div class="row">
+    <embed src="./机器学习的应用及理论分类.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+ </li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/23/机器学习训练营-任务清单/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-book-机器学习-周志华" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -168,7 +272,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">593字</span>
+        <span class="post-count">729字</span>
       </span>
     </span>
 
@@ -197,6 +301,7 @@
 <script type="math/tex; mode=display">H(x) = sign(\sum\limits_{i=1}^{T}h_i(x)) \tag{8.2}</script><p><strong>假设基分类器的错误率相对独立</strong>，则由Hoeffding不等式可知，集成的错误率为：<br>\begin{align}P(H(x) \neq f(x)) &amp; = \sum\limits_{k=0}^{\left \lfloor T/2 \right \rfloor} \tbinom{T}{k} (1 - \epsilon)^k \epsilon ^{T-k} \\<br>&amp; \leq exp(-\frac{1}{2} T(1-2\epsilon)^2) \tag{8.3}\end{align}<br>结论：随着集成分类器数目$T$的增大，集成的错误率将指数级下降，最后趋向于零。</p>
 </blockquote>
 <p>根据个体学习器的生成方式，目前的集成学习方法大致可以分类两类：<br>一类是个体学习器间存在强依赖关系，必须串行生成的序列化方法，代表是Boosting；<br>另一类是个体学习器间不存在强依赖关系，可同时生成的化方并行化方法，代表是Bagging和随机森林。</p>
+<h4 id="8-2-Boosting"><a href="#8-2-Boosting" class="headerlink" title="8.2 Boosting"></a>8.2 Boosting</h4><p>Boosting族算法的工作机制类似于：先从初始训练集训练出一个基学习器，再根据基学习器的表现对训练样本分布进行调整，使得先前基学习器做错的训练样本在后续受到更多关注，然后基于调整后的样本分布来训练下一个基学习器；如此重复进行，直到基学习器数目达到事先指定的值$T$，最终将这$T$个基学习器进行加权融合。</p>
 
       
 
@@ -1035,111 +1140,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/09/06/LintCode-0003-digit-counts/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-LintCode-0040-implement-queue-by-two-stacks" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/05/LintCode-0040-implement-queue-by-two-stacks/">LintCode第40题|用栈实现队列 [中等]</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/05/LintCode-0040-implement-queue-by-two-stacks/" class="archive-article-date">
-  	<time datetime="2018-09-05T06:45:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-05</time>
-</a>
-		
-        
-          <div style="margin-top:6px;color:#ABABAB">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">710字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">3分</span>
-      </span>
-    </span>
-</div>
-          
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-问题介绍"><a href="#1-问题介绍" class="headerlink" title="1. 问题介绍"></a>1. 问题介绍</h3><blockquote>
-<p><strong>描述</strong><br>正如标题所述，你需要使用两个栈来实现队列的一些操作。<br>队列应支持push(element)，pop() 和 top()，其中pop是弹出队列中的第一个(最前面的)元素。<br>pop和top方法都应该返回第一个元素的值。<br><strong>样例</strong><br>比如push(1), pop(), push(2), push(3), top(), pop()，你应该返回1，2和2。<br><strong>挑战</strong><br>仅使用两个栈来实现它，不使用任何其他数据结构，push，pop 和 top的复杂度都应该是均摊O(1)的。<br><a href="https://www.lintcode.com/problem/implement-queue-by-two-stacks/description" target="_blank" rel="noopener">原题链接</a></p>
-</blockquote>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">LintCode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/05/LintCode-0040-implement-queue-by-two-stacks/">展开全文 >></a>
         </p>
       
 

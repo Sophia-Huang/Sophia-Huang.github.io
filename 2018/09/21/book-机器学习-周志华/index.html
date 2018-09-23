@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="yulin的博客">
 <meta property="og:description" content="第8章 集成学习8.1 个体与集成集成学习的一般结构是：先产生一组“个体学习器”(individual learner)，再用某种策略把他们结合起来。 若集成中只包含同种类型的个体学习器，如“决策树集成”中全是决策树，这样的集成是同质的(homogeneous)。同质集成中的个体学习器也称为“基学习器”(base learner)，相应的学习算法称为“基学习算法”(base learning al">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-21T14:31:00.907Z">
+<meta property="og:updated_time" content="2018-09-22T04:30:55.218Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习|周志华">
 <meta name="twitter:description" content="第8章 集成学习8.1 个体与集成集成学习的一般结构是：先产生一组“个体学习器”(individual learner)，再用某种策略把他们结合起来。 若集成中只包含同种类型的个体学习器，如“决策树集成”中全是决策树，这样的集成是同质的(homogeneous)。同质集成中的个体学习器也称为“基学习器”(base learner)，相应的学习算法称为“基学习算法”(base learning al">
@@ -171,7 +171,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">593字</span>
+        <span class="post-count">729字</span>
       </span>
     </span>
 
@@ -200,6 +200,7 @@
 <script type="math/tex; mode=display">H(x) = sign(\sum\limits_{i=1}^{T}h_i(x)) \tag{8.2}</script><p><strong>假设基分类器的错误率相对独立</strong>，则由Hoeffding不等式可知，集成的错误率为：<br>\begin{align}P(H(x) \neq f(x)) &amp; = \sum\limits_{k=0}^{\left \lfloor T/2 \right \rfloor} \tbinom{T}{k} (1 - \epsilon)^k \epsilon ^{T-k} \\<br>&amp; \leq exp(-\frac{1}{2} T(1-2\epsilon)^2) \tag{8.3}\end{align}<br>结论：随着集成分类器数目$T$的增大，集成的错误率将指数级下降，最后趋向于零。</p>
 </blockquote>
 <p>根据个体学习器的生成方式，目前的集成学习方法大致可以分类两类：<br>一类是个体学习器间存在强依赖关系，必须串行生成的序列化方法，代表是Boosting；<br>另一类是个体学习器间不存在强依赖关系，可同时生成的化方并行化方法，代表是Bagging和随机森林。</p>
+<h4 id="8-2-Boosting"><a href="#8-2-Boosting" class="headerlink" title="8.2 Boosting"></a>8.2 Boosting</h4><p>Boosting族算法的工作机制类似于：先从初始训练集训练出一个基学习器，再根据基学习器的表现对训练样本分布进行调整，使得先前基学习器做错的训练样本在后续受到更多关注，然后基于调整后的样本分布来训练下一个基学习器；如此重复进行，直到基学习器数目达到事先指定的值$T$，最终将这$T$个基学习器进行加权融合。</p>
 
       
 
@@ -232,6 +233,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2018/09/23/机器学习训练营-任务清单/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          机器学习训练营|任务清单
+        
+      </div>
+    </a>
+  
   
     <a href="/2018/09/21/hexo-references/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Hexo+Yilia|参考资料</div>
@@ -261,7 +271,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#第8章-集成学习"><span class="toc-number">1.</span> <span class="toc-text">第8章 集成学习</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1-个体与集成"><span class="toc-number">1.1.</span> <span class="toc-text">8.1 个体与集成</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#第8章-集成学习"><span class="toc-number">1.</span> <span class="toc-text">第8章 集成学习</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1-个体与集成"><span class="toc-number">1.1.</span> <span class="toc-text">8.1 个体与集成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-2-Boosting"><span class="toc-number">1.2.</span> <span class="toc-text">8.2 Boosting</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
