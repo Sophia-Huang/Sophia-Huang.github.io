@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/01/01/my-2018/</loc>
+    
+    <lastmod>2018-10-03T14:23:15.496Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/09/28/video-cs231n-%E6%9D%8E%E9%A3%9E%E9%A3%9E/</loc>
     
-    <lastmod>2018-09-28T09:39:36.632Z</lastmod>
+    <lastmod>2018-10-03T14:08:49.590Z</lastmod>
     
   </url>
   
@@ -131,13 +138,6 @@
     <loc>http://yoursite.com/2018/09/21/hexo-references/</loc>
     
     <lastmod>2018-09-21T14:28:12.821Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/01/01/my-2018/</loc>
-    
-    <lastmod>2018-09-21T14:22:38.971Z</lastmod>
     
   </url>
   

@@ -168,7 +168,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">40字</span>
+        <span class="post-count">1.4k字</span>
       </span>
     </span>
 
@@ -177,7 +177,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">6分</span>
       </span>
     </span>
 </div>
@@ -187,15 +187,82 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Lecture-1-Course-Introduction-slice"><a href="#Lecture-1-Course-Introduction-slice" class="headerlink" title="Lecture 1: Course Introduction slice"></a>Lecture 1: Course Introduction <a href="https://drive.google.com/open?id=1x9x1YKG52ZA8X_YD4g68Sq85OvM_6bh-" target="_blank" rel="noopener">slice</a></h3><h4 id="1-1-Computer-vision-overview"><a href="#1-1-Computer-vision-overview" class="headerlink" title="1.1 Computer vision overview"></a>1.1 Computer vision overview</h4><p>Related Courses @ Stanford</p>
+        <h3 id="Lecture-1-Course-Introduction-slice"><a href="#Lecture-1-Course-Introduction-slice" class="headerlink" title="Lecture 1: Course Introduction [slice]"></a>Lecture 1: Course Introduction <a href="https://drive.google.com/open?id=1x9x1YKG52ZA8X_YD4g68Sq85OvM_6bh-" target="_blank" rel="noopener">[slice]</a></h3><h4 id="1-1-Computer-vision-overview"><a href="#1-1-Computer-vision-overview" class="headerlink" title="1.1 Computer vision overview"></a>1.1 Computer vision overview</h4><blockquote>
+<p>Related Courses @ Stanford</p>
 <ul>
 <li>CS131: Undergraduate introductory class</li>
 <li>cs224n: intersection of deep learning and natural language processing</li>
 <li>cs231a: more emcompassing</li>
 <li>cs231n: algorithms and applications, CNN</li>
 </ul>
-<h4 id="1-2-Historical-context"><a href="#1-2-Historical-context" class="headerlink" title="1.2 Historical context"></a>1.2 Historical context</h4><p><img src="/assets/blogImg/1-13e.jpg" width="700"></p>
-<h4 id="1-3-Course-logistics"><a href="#1-3-Course-logistics" class="headerlink" title="1.3 Course logistics"></a>1.3 Course logistics</h4>
+</blockquote>
+<h4 id="1-2-Historical-context"><a href="#1-2-Historical-context" class="headerlink" title="1.2 Historical context"></a>1.2 Historical context</h4><p><img src="/assets/blogImg/cs231n/1-13.jpg" width="700"></p>
+<ul>
+<li>if object recognition is too hard, do object segmentation firstly.</li>
+<li>SIFT &amp; object recognition: use critical features to represent the whole object, and caculate two objects’ similarity.</li>
+<li>PASCAL Visual Object Challenge</li>
+</ul>
+<h4 id="1-3-Course-logistics"><a href="#1-3-Course-logistics" class="headerlink" title="1.3 Course logistics"></a>1.3 Course logistics</h4><h3 id="Lecture-2-Image-Classification"><a href="#Lecture-2-Image-Classification" class="headerlink" title="Lecture 2: Image Classification"></a>Lecture 2: Image Classification</h3><h4 id="2-1-The-data-driven-approach"><a href="#2-1-The-data-driven-approach" class="headerlink" title="2.1 The data-driven approach"></a>2.1 The data-driven approach</h4><p>The Problem: Semantic Gap<br>像素值构成的数值矩阵与标签语义间的差别。稍微移动一下相机，标签不变，但像素值矩阵变化十分巨大，要求算法具有鲁棒性。 </p>
+<p>解决方法1：基于规则<br>计算图形边缘，并对每部分进行分类，如三条线交于一点可能是猫耳朵。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">classify_image</span><span class="params">(image)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> class_label</span><br></pre></td></tr></table></figure></p>
+<p>存在问题：</p>
+<ul>
+<li>容易出错</li>
+<li>难以迁移到其他学习，例如狗、卡车等。</li>
+</ul>
+<p>解决方法2：数据驱动(Data-Driven Approach)</p>
+<ol>
+<li>Collect a dataset of images and labels</li>
+<li>Use Machine Learning to train a classifier</li>
+<li>Evaluate the classifier on new images<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">train</span><span class="params">(images, labels)</span>:</span></span><br><span class="line">    <span class="comment"># Machine learning</span></span><br><span class="line">    <span class="keyword">return</span> model</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">predict</span><span class="params">(model, test_images)</span>:</span></span><br><span class="line">    <span class="comment"># Use model to predict labels</span></span><br><span class="line">    <span class="keyword">return</span> test_labels</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>First classifier: Nearest Neighbour<br>使用训练集中最像的image的label作为test集中需要预测的image的label<br>使用L1距离表示两张图片的相似度<br><img src="/assets/blogImg/cs231n/2-20.jpg" width="700"></p>
+<blockquote>
+<p>Example Dataset: CIFAR10</p>
+</blockquote>
+<p>源代码：<br><img src="/assets/blogImg/cs231n/2-26.jpg" width="700"><br>Complexity: train O(1), predict O(N)</p>
+<p>Problem 1: 我们希望训练过程相对复杂而预测过程比较简单<br>解决办法：使用CNN等其他算法</p>
+<p>problem 2: 由于离群点或噪声的存在，预测可能不准<br>解决办法：使用KNN(平滑边界)</p>
+<h4 id="2-2-K-nearest-neighbor-notes"><a href="#2-2-K-nearest-neighbor-notes" class="headerlink" title="2.2 K-nearest neighbor [notes]"></a>2.2 K-nearest neighbor <a href="http://cs231n.github.io/classification" target="_blank" rel="noopener">[notes]</a></h4><p><img src="/assets/blogImg/cs231n/2-31.jpg" width="700"><br>L1距离和L2距离的差别：L1距离取决于坐标系，而L2距离与坐标系无关。<br>如果特征向量有明确的意义，用L1距离或许会更好；若特征向量只是某个空间中的一个通用向量，我们并不知道其意义，用L2距离或许会更好。<br><img src="/assets/blogImg/cs231n/2-40.jpg" width="700"><br><img src="/assets/blogImg/cs231n/2-41.jpg" width="700"><br>交叉验证更适用于较小的数据集，在深度学习中不常用。</p>
+<p>KNN问题：</p>
+<ul>
+<li>不适用于图像处理</li>
+<li>维度灾难(the curse of dimensionality)：随着特征维度增加，训练成本指数级增加。(维度高时，若想准确分类，需要更多的样本，否则样本在空间内分布稀疏)<br><img src="/assets/blogImg/cs231n/2-44.jpg" width="700"></li>
+</ul>
+<h4 id="2-3-Linear-classification-I-notes"><a href="#2-3-Linear-classification-I-notes" class="headerlink" title="2.3 Linear classification I [notes]"></a>2.3 Linear classification I <a href="http://cs231n.github.io/linear-classify" target="_blank" rel="noopener">[notes]</a></h4><p>问题1：对于某一种类别只会学习出单一的平均的模板，而对于图像而言，训练集常出现的是某个标准图像的各种变体，例如车的正面侧面，使得训练出的模板W变得似乎四不像。<br>解决方法：使用神经网络或者其他更为复杂的模型，不局限于仅仅学习一个模板(model)。<br>问题2：低维空间的线性不可分问题<br><img src="/assets/blogImg/cs231n/2-59.jpg" width="700"></p>
+<h3 id="Lecture-3-Loss-Functions-and-Optimization"><a href="#Lecture-3-Loss-Functions-and-Optimization" class="headerlink" title="Lecture 3: Loss Functions and Optimization"></a>Lecture 3: Loss Functions and Optimization</h3><h4 id="3-1-Linear-classification-II"><a href="#3-1-Linear-classification-II" class="headerlink" title="3.1 Linear classification II"></a>3.1 Linear classification II</h4><p>通过损失函数Loss Function来确定较好的$W$。</p>
+<blockquote>
+<p>Given an example $(x_i,y_i)$, where $x_i$ is the image and $y_i$ is the (integer) label. The scores vector is $s=f(x_i,W)$<br>Loss over the dataset is a sum of loss over examples:</p>
+<script type="math/tex; mode=display">W=argmin L=argmin \frac{1}{N}\sum L_i(f(x_i,W),y_i)</script><p>The SVM loss has the form:<br>\begin{align}<br>L_i &amp;= \sum\limits_{j\neq y_i}<br>    \begin{cases}<br>    0, &amp;\text{if $s_{y_i}\geq s_j+1$}\\<br>    s_j-s_{y_i}+1, &amp;\text{otherwise}<br>    \end{cases}\\<br>    &amp;=\sum\limits_{j\neq y_i}max(0,s_j-s_{y_i}+1)<br>\end{align}</p>
+<p align="right">——"Hinge loss"</p>
+
+</blockquote>
+<p>对于所有错误的分类，比较正确分类的分数和错误分类的分数，如果正确分类的分数比错误分类的分数高出某个安全边界(此处设为1)，则损失设为0，否则设为两者之差。<br>threshold为1类似于SVM中的支持向量，无论设为多少，都是同时增大或减少。<br>Example:<br><img src="/assets/blogImg/cs231n/3-14.jpg" width="700"><br><img src="/assets/blogImg/cs231n/3-17.jpg" width="700"></p>
+<p>Q1: What happens to loss if car scores change a bit?<br>A1: 由于car的分数比其他类别高出许多，所以即使图像稍微变动一点，Loss Function依然会是0。因而这个模型比较具有鲁棒性。 </p>
+<p>Q2: what is the min/max possible loss?<br>A2: 根据Hinge loss，最大可能值为0，最小可能值为负无穷。</p>
+<p>Q3: At initialization W is small so all s ≈ 0. What is the loss?<br>A3: $L_i = \sum\limits_{j\neq y_i}1=N-1$</p>
+<p>Q4: What if the sum was over all classes? (including j = y_i)<br>A4: 结果+1</p>
+<p>Q5: What if we used mean instead of sum?<br>A5: 损失函数缩小常数倍，结果不影响。</p>
+<p>Q6: What if we used $L_i=\sum\limits_{j\neq y_i}max(0,s_j-s_{y_i}+1)^2$?<br>A6: 损失函数进行了非线性变换，结果会产生影响。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">L_i_vectorized</span><span class="params">(x,y,W)</span>:</span></span><br><span class="line">    scores = W.dot(x)</span><br><span class="line">    margins = np.maximum(<span class="number">0</span>, scores - scores[y] + <span class="number">1</span>)</span><br><span class="line">    margins[y] = <span class="number">0</span></span><br><span class="line">    loss_i = np.sum(margins)</span><br><span class="line">    <span class="keyword">return</span> loss_i</span><br></pre></td></tr></table></figure>
+<p>Q7: Suppose that we found a W such that L = 0. Is this W unique?<br>A7: Not unique. For any constant c$\neq$0,cW also satisfies.</p>
+<p>避免过拟合，加入正则项，选择更简单的W。L1偏向于更稀疏，L2偏向于所有数字更小。<br><img src="/assets/blogImg/cs231n/3-34.jpg" width="700"></p>
+<h4 id="3-2-Higher-level-representations-image-features"><a href="#3-2-Higher-level-representations-image-features" class="headerlink" title="3.2 Higher-level representations, image features"></a>3.2 Higher-level representations, image features</h4><p>Softmax Classifier(Multinomial Logistic Regression)<br>对于SVM模型，我们并没有指定scores的内在含义，而对于Softmax loss，scores表示概率。我们希望真实标签的概率越大且接近1。<br><img src="/assets/blogImg/cs231n/3-42.jpg" width="700"><br>Example:<br><img src="/assets/blogImg/cs231n/3-46.jpg" width="700"></p>
+<p>Q1: What is the min/max possible loss L_i?<br>A1: 最大0，最小负无穷。</p>
+<p>Q2: Usually at initialization W is small ao all s ≈ 0. What is the loss?<br>A2: $\log{N}$</p>
+<p>SVM &amp; Softmax对比：<br><img src="/assets/blogImg/cs231n/3-49.jpg" width="700"></p>
+<p>Conclusion:<br><img src="/assets/blogImg/cs231n/3-53.jpg" width="700"></p>
+<h4 id="3-3-Optimization-stochastic-gradient-descent"><a href="#3-3-Optimization-stochastic-gradient-descent" class="headerlink" title="3.3 Optimization, stochastic gradient descent"></a>3.3 Optimization, stochastic gradient descent</h4><p>Strategy 1. random search<br><img src="/assets/blogImg/cs231n/3-57.jpg" width="700"></p>
+<p>Strategy 2. Follow the slope(gradient descent)</p>
+<ul>
+<li><p>finite difference:<br><img src="/assets/blogImg/cs231n/3-65.jpg" width="700"></p>
+</li>
+<li><p>Calculus<br><img src="/assets/blogImg/cs231n/3-73.jpg" width="700"></p>
+</li>
+</ul>
+<p>Problem: 当N，即样本量很大时，每次迭代每个变量的梯度会使得计算十分复杂。此时经常采用随机梯度下降法。<br>Stochastic Gradient Descent<br><img src="/assets/blogImg/cs231n/3-76.jpg" width="700"><br>其中256是一个minibatch，总是使用形如$2^n$作为minibatch。</p>
+<h4 id="并没有听懂"><a href="#并没有听懂" class="headerlink" title="[并没有听懂]"></a>[并没有听懂]</h4><p><img src="/assets/blogImg/cs231n/3-82.jpg" width="700"><br><img src="/assets/blogImg/cs231n/3-83.jpg" width="700"></p>
+<h3 id="Lecture-4-Introduction-to-Neural-Networks"><a href="#Lecture-4-Introduction-to-Neural-Networks" class="headerlink" title="Lecture 4: Introduction to Neural Networks"></a>Lecture 4: Introduction to Neural Networks</h3><h4 id="4-1-Backpropagation"><a href="#4-1-Backpropagation" class="headerlink" title="4.1 Backpropagation"></a>4.1 Backpropagation</h4><h4 id="4-2-Multi-layer-Perceptrons"><a href="#4-2-Multi-layer-Perceptrons" class="headerlink" title="4.2 Multi-layer Perceptrons"></a>4.2 Multi-layer Perceptrons</h4><h4 id="4-3-The-neural-viewpoint"><a href="#4-3-The-neural-viewpoint" class="headerlink" title="4.3 The neural viewpoint"></a>4.3 The neural viewpoint</h4>
       
 
       
@@ -1361,10 +1428,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
@@ -1373,11 +1436,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">韩语</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">深度学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">韩语</a>
               </li>
             
             <div class="clearfix"></div>
