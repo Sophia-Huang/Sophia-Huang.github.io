@@ -146,6 +146,104 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-plug" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/01/plug/">小技巧</a>
+    </h1>
+  
+
+        
+        <a href="/2018/12/01/plug/" class="archive-article-date">
+  	<time datetime="2018-12-01T15:59:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-01</time>
+</a>
+		
+        
+          <div style="margin-top:6px;color:#ABABAB">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">13字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1分</span>
+      </span>
+    </span>
+</div>
+          
+      </header>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>H5视频加速播放:</p>
+<blockquote>
+<p>document.getElementById(‘html5player_html5_api’).playbackRate=1.0</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">归档</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/12/01/plug/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-video-cs231n-李飞飞" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -168,7 +266,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.4k字</span>
+        <span class="post-count">1.5k字</span>
       </span>
     </span>
 
@@ -262,7 +360,21 @@
 </ul>
 <p>Problem: 当N，即样本量很大时，每次迭代每个变量的梯度会使得计算十分复杂。此时经常采用随机梯度下降法。<br>Stochastic Gradient Descent<br><img src="/assets/blogImg/cs231n/3-76.jpg" width="700"><br>其中256是一个minibatch，总是使用形如$2^n$作为minibatch。</p>
 <h4 id="并没有听懂"><a href="#并没有听懂" class="headerlink" title="[并没有听懂]"></a>[并没有听懂]</h4><p><img src="/assets/blogImg/cs231n/3-82.jpg" width="700"><br><img src="/assets/blogImg/cs231n/3-83.jpg" width="700"></p>
-<h3 id="Lecture-4-Introduction-to-Neural-Networks"><a href="#Lecture-4-Introduction-to-Neural-Networks" class="headerlink" title="Lecture 4: Introduction to Neural Networks"></a>Lecture 4: Introduction to Neural Networks</h3><h4 id="4-1-Backpropagation"><a href="#4-1-Backpropagation" class="headerlink" title="4.1 Backpropagation"></a>4.1 Backpropagation</h4><h4 id="4-2-Multi-layer-Perceptrons"><a href="#4-2-Multi-layer-Perceptrons" class="headerlink" title="4.2 Multi-layer Perceptrons"></a>4.2 Multi-layer Perceptrons</h4><h4 id="4-3-The-neural-viewpoint"><a href="#4-3-The-neural-viewpoint" class="headerlink" title="4.3 The neural viewpoint"></a>4.3 The neural viewpoint</h4>
+<h3 id="Lecture-4-Introduction-to-Neural-Networks"><a href="#Lecture-4-Introduction-to-Neural-Networks" class="headerlink" title="Lecture 4: Introduction to Neural Networks"></a>Lecture 4: Introduction to Neural Networks</h3><h4 id="4-1-Backpropagation"><a href="#4-1-Backpropagation" class="headerlink" title="4.1 Backpropagation"></a>4.1 Backpropagation</h4><p>computational graphs<br><img src="/assets/blogImg/cs231n/4-8.jpg" width="700"></p>
+<ol>
+<li>express a function using a computational graph</li>
+<li>use Backpropagation to compute gradient(recursively use the chain rule)</li>
+</ol>
+<h4 id="4-2-Multi-layer-Perceptrons"><a href="#4-2-Multi-layer-Perceptrons" class="headerlink" title="4.2 Multi-layer Perceptrons"></a>4.2 Multi-layer Perceptrons</h4><p>Examples:<br><img src="/assets/blogImg/cs231n/4-23.jpg" width="700"><br><img src="/assets/blogImg/cs231n/4-43.jpg" width="700"><br>当某个较为复杂的部分可以计算梯度时，可以选择用一个节点去替代它，如上图例二中的sigmoid函数。<br><img src="/assets/blogImg/cs231n/4-45.jpg" width="700"></p>
+<p><img src="/assets/blogImg/cs231n/4-45.jpg" width="700"><br>add: 按本身值分配<br>max: 分配给最大值，其余节点为0<br>multiply: 按另一个节点的值分配给当前节点</p>
+<blockquote>
+<p>Always check: The gradient with respect to a variable should have the same shape as the variable.</p>
+</blockquote>
+<p>Codes:<br><img src="/assets/blogImg/cs231n/4-75.jpg" width="700"><br><img src="/assets/blogImg/cs231n/4-77.jpg" width="700"><br><img src="/assets/blogImg/cs231n/4-79.jpg" width="700"></p>
+<h4 id="4-3-The-neural-viewpoint"><a href="#4-3-The-neural-viewpoint" class="headerlink" title="4.3 The neural viewpoint"></a>4.3 The neural viewpoint</h4><p><img src="/assets/blogImg/cs231n/4-86.jpg" width="700"><br>Code:<br><img src="/assets/blogImg/cs231n/4-88.jpg" width="700"></p>
+<p>神经网络的工作原理:<br><img src="/assets/blogImg/cs231n/4-94.jpg" width="700"></p>
+<p>Activation functions:<br><img src="/assets/blogImg/cs231n/4-96.jpg" width="700"></p>
+
       
 
       
@@ -1184,119 +1296,9 @@
 
 
   
-    <article id="post-LintCode-0038-search-a-2d-matrix-ii" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/06/LintCode-0038-search-a-2d-matrix-ii/">LintCode第38题|搜索二维矩阵Ⅱ [中等]</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/06/LintCode-0038-search-a-2d-matrix-ii/" class="archive-article-date">
-  	<time datetime="2018-09-06T05:45:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-06</time>
-</a>
-		
-        
-          <div style="margin-top:6px;color:#ABABAB">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">293字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
-</div>
-          
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-问题介绍"><a href="#1-问题介绍" class="headerlink" title="1. 问题介绍"></a>1. 问题介绍</h3><blockquote>
-<p><strong>描述</strong><br>写出一个高效的算法来搜索m×n矩阵中的值，返回这个值出现的次数。<br>这个矩阵具有以下特性：</p>
-<ul>
-<li>每行中的整数从左到右是排序的。</li>
-<li>每一列的整数从上到下是排序的。</li>
-<li>在每一行或每一列中没有重复的整数。<br><strong>样例</strong><br>考虑下列矩阵：<br>[[1, 3, 5, 7],<br>[2, 4, 7, 8],<br>[3, 5, 9, 10]]<br>给出target = 3，返回 2<br><strong>挑战</strong><br>要求O(m+n)时间复杂度和O(1)额外空间<br><a href="https://www.lintcode.com/problem/search-a-2d-matrix-ii/description" target="_blank" rel="noopener">原题链接</a></li>
-</ul>
-</blockquote>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">LintCode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/06/LintCode-0038-search-a-2d-matrix-ii/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -1424,11 +1426,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">阅读札记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1436,11 +1434,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">深度学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">阅读札记</a>
               </li>
              
               <li class="article-tag-list-item">

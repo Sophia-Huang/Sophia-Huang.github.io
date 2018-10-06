@@ -37,7 +37,19 @@
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/3-76.jpg">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/3-82.jpg">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/3-83.jpg">
-<meta property="og:updated_time" content="2018-10-03T14:08:49.590Z">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-8.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-23.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-43.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-45.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-45.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-75.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-77.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-79.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-86.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-88.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-94.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-96.jpg">
+<meta property="og:updated_time" content="2018-10-06T12:45:59.722Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Convolutional Neural Networks for Visual Recognition|李飞飞">
 <meta name="twitter:description" content="Lecture 1: Course Introduction [slice]1.1 Computer vision overview Related Courses @ Stanford  CS131: Undergraduate introductory class cs224n: intersection of deep learning and natural language proces">
@@ -193,7 +205,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.4k字</span>
+        <span class="post-count">1.5k字</span>
       </span>
     </span>
 
@@ -287,7 +299,21 @@
 </ul>
 <p>Problem: 当N，即样本量很大时，每次迭代每个变量的梯度会使得计算十分复杂。此时经常采用随机梯度下降法。<br>Stochastic Gradient Descent<br><img src="/assets/blogImg/cs231n/3-76.jpg" width="700"><br>其中256是一个minibatch，总是使用形如$2^n$作为minibatch。</p>
 <h4 id="并没有听懂"><a href="#并没有听懂" class="headerlink" title="[并没有听懂]"></a>[并没有听懂]</h4><p><img src="/assets/blogImg/cs231n/3-82.jpg" width="700"><br><img src="/assets/blogImg/cs231n/3-83.jpg" width="700"></p>
-<h3 id="Lecture-4-Introduction-to-Neural-Networks"><a href="#Lecture-4-Introduction-to-Neural-Networks" class="headerlink" title="Lecture 4: Introduction to Neural Networks"></a>Lecture 4: Introduction to Neural Networks</h3><h4 id="4-1-Backpropagation"><a href="#4-1-Backpropagation" class="headerlink" title="4.1 Backpropagation"></a>4.1 Backpropagation</h4><h4 id="4-2-Multi-layer-Perceptrons"><a href="#4-2-Multi-layer-Perceptrons" class="headerlink" title="4.2 Multi-layer Perceptrons"></a>4.2 Multi-layer Perceptrons</h4><h4 id="4-3-The-neural-viewpoint"><a href="#4-3-The-neural-viewpoint" class="headerlink" title="4.3 The neural viewpoint"></a>4.3 The neural viewpoint</h4>
+<h3 id="Lecture-4-Introduction-to-Neural-Networks"><a href="#Lecture-4-Introduction-to-Neural-Networks" class="headerlink" title="Lecture 4: Introduction to Neural Networks"></a>Lecture 4: Introduction to Neural Networks</h3><h4 id="4-1-Backpropagation"><a href="#4-1-Backpropagation" class="headerlink" title="4.1 Backpropagation"></a>4.1 Backpropagation</h4><p>computational graphs<br><img src="/assets/blogImg/cs231n/4-8.jpg" width="700"></p>
+<ol>
+<li>express a function using a computational graph</li>
+<li>use Backpropagation to compute gradient(recursively use the chain rule)</li>
+</ol>
+<h4 id="4-2-Multi-layer-Perceptrons"><a href="#4-2-Multi-layer-Perceptrons" class="headerlink" title="4.2 Multi-layer Perceptrons"></a>4.2 Multi-layer Perceptrons</h4><p>Examples:<br><img src="/assets/blogImg/cs231n/4-23.jpg" width="700"><br><img src="/assets/blogImg/cs231n/4-43.jpg" width="700"><br>当某个较为复杂的部分可以计算梯度时，可以选择用一个节点去替代它，如上图例二中的sigmoid函数。<br><img src="/assets/blogImg/cs231n/4-45.jpg" width="700"></p>
+<p><img src="/assets/blogImg/cs231n/4-45.jpg" width="700"><br>add: 按本身值分配<br>max: 分配给最大值，其余节点为0<br>multiply: 按另一个节点的值分配给当前节点</p>
+<blockquote>
+<p>Always check: The gradient with respect to a variable should have the same shape as the variable.</p>
+</blockquote>
+<p>Codes:<br><img src="/assets/blogImg/cs231n/4-75.jpg" width="700"><br><img src="/assets/blogImg/cs231n/4-77.jpg" width="700"><br><img src="/assets/blogImg/cs231n/4-79.jpg" width="700"></p>
+<h4 id="4-3-The-neural-viewpoint"><a href="#4-3-The-neural-viewpoint" class="headerlink" title="4.3 The neural viewpoint"></a>4.3 The neural viewpoint</h4><p><img src="/assets/blogImg/cs231n/4-86.jpg" width="700"><br>Code:<br><img src="/assets/blogImg/cs231n/4-88.jpg" width="700"></p>
+<p>神经网络的工作原理:<br><img src="/assets/blogImg/cs231n/4-94.jpg" width="700"></p>
+<p>Activation functions:<br><img src="/assets/blogImg/cs231n/4-96.jpg" width="700"></p>
+
       
 
       
@@ -318,6 +344,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/12/01/plug/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          小技巧
+        
+      </div>
+    </a>
   
   
     <a href="/2018/09/23/training-camp-machine-learning-task-list/" id="article-nav-older" class="article-nav-link-wrap">
@@ -493,11 +528,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">阅读札记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -505,11 +536,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">深度学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">阅读札记</a>
               </li>
              
               <li class="article-tag-list-item">
