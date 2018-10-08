@@ -41,7 +41,7 @@
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-23.jpg">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-43.jpg">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-45.jpg">
-<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-45.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-50.jpg">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-75.jpg">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-77.jpg">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-79.jpg">
@@ -49,7 +49,19 @@
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-88.jpg">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-94.jpg">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/4-96.jpg">
-<meta property="og:updated_time" content="2018-10-06T12:45:59.722Z">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/5-27.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/5-31.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/5-36.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/5-40.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/5-62.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/5-64.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/5-65.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/5-73.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/5-75.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/6-44.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/6-46.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/cs231n/6-47.jpg">
+<meta property="og:updated_time" content="2018-10-08T06:24:37.393Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Convolutional Neural Networks for Visual Recognition|李飞飞">
 <meta name="twitter:description" content="Lecture 1: Course Introduction [slice]1.1 Computer vision overview Related Courses @ Stanford  CS131: Undergraduate introductory class cs224n: intersection of deep learning and natural language proces">
@@ -205,7 +217,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.5k字</span>
+        <span class="post-count">2.7k字</span>
       </span>
     </span>
 
@@ -214,7 +226,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">6分</span>
+        <span class="post-count">11分</span>
       </span>
     </span>
 </div>
@@ -239,7 +251,8 @@
 <li>SIFT &amp; object recognition: use critical features to represent the whole object, and caculate two objects’ similarity.</li>
 <li>PASCAL Visual Object Challenge</li>
 </ul>
-<h4 id="1-3-Course-logistics"><a href="#1-3-Course-logistics" class="headerlink" title="1.3 Course logistics"></a>1.3 Course logistics</h4><h3 id="Lecture-2-Image-Classification"><a href="#Lecture-2-Image-Classification" class="headerlink" title="Lecture 2: Image Classification"></a>Lecture 2: Image Classification</h3><h4 id="2-1-The-data-driven-approach"><a href="#2-1-The-data-driven-approach" class="headerlink" title="2.1 The data-driven approach"></a>2.1 The data-driven approach</h4><p>The Problem: Semantic Gap<br>像素值构成的数值矩阵与标签语义间的差别。稍微移动一下相机，标签不变，但像素值矩阵变化十分巨大，要求算法具有鲁棒性。 </p>
+<h4 id="1-3-Course-logistics"><a href="#1-3-Course-logistics" class="headerlink" title="1.3 Course logistics"></a>1.3 Course logistics</h4><a id="more"></a>
+<h3 id="Lecture-2-Image-Classification"><a href="#Lecture-2-Image-Classification" class="headerlink" title="Lecture 2: Image Classification"></a>Lecture 2: Image Classification</h3><h4 id="2-1-The-data-driven-approach"><a href="#2-1-The-data-driven-approach" class="headerlink" title="2.1 The data-driven approach"></a>2.1 The data-driven approach</h4><p>The Problem: Semantic Gap<br>像素值构成的数值矩阵与标签语义间的差别。稍微移动一下相机，标签不变，但像素值矩阵变化十分巨大，要求算法具有鲁棒性。 </p>
 <p>解决方法1：基于规则<br>计算图形边缘，并对每部分进行分类，如三条线交于一点可能是猫耳朵。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">classify_image</span><span class="params">(image)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> class_label</span><br></pre></td></tr></table></figure></p>
 <p>存在问题：</p>
 <ul>
@@ -305,7 +318,7 @@
 <li>use Backpropagation to compute gradient(recursively use the chain rule)</li>
 </ol>
 <h4 id="4-2-Multi-layer-Perceptrons"><a href="#4-2-Multi-layer-Perceptrons" class="headerlink" title="4.2 Multi-layer Perceptrons"></a>4.2 Multi-layer Perceptrons</h4><p>Examples:<br><img src="/assets/blogImg/cs231n/4-23.jpg" width="700"><br><img src="/assets/blogImg/cs231n/4-43.jpg" width="700"><br>当某个较为复杂的部分可以计算梯度时，可以选择用一个节点去替代它，如上图例二中的sigmoid函数。<br><img src="/assets/blogImg/cs231n/4-45.jpg" width="700"></p>
-<p><img src="/assets/blogImg/cs231n/4-45.jpg" width="700"><br>add: 按本身值分配<br>max: 分配给最大值，其余节点为0<br>multiply: 按另一个节点的值分配给当前节点</p>
+<p><img src="/assets/blogImg/cs231n/4-50.jpg" width="700"><br>add: 按本身值分配<br>max: 分配给最大值，其余节点为0<br>multiply: 按另一个节点的值分配给当前节点</p>
 <blockquote>
 <p>Always check: The gradient with respect to a variable should have the same shape as the variable.</p>
 </blockquote>
@@ -313,7 +326,55 @@
 <h4 id="4-3-The-neural-viewpoint"><a href="#4-3-The-neural-viewpoint" class="headerlink" title="4.3 The neural viewpoint"></a>4.3 The neural viewpoint</h4><p><img src="/assets/blogImg/cs231n/4-86.jpg" width="700"><br>Code:<br><img src="/assets/blogImg/cs231n/4-88.jpg" width="700"></p>
 <p>神经网络的工作原理:<br><img src="/assets/blogImg/cs231n/4-94.jpg" width="700"></p>
 <p>Activation functions:<br><img src="/assets/blogImg/cs231n/4-96.jpg" width="700"></p>
-
+<h3 id="Lecture-5-Convolutional-Neural-Networks"><a href="#Lecture-5-Convolutional-Neural-Networks" class="headerlink" title="Lecture 5: Convolutional Neural Networks"></a>Lecture 5: Convolutional Neural Networks</h3><h4 id="5-1-History"><a href="#5-1-History" class="headerlink" title="5.1 History"></a>5.1 History</h4><ul>
+<li>CNN需要训练卷积层，卷积层能够更好地保留输入的空间结构</li>
+</ul>
+<h4 id="5-2-Convolution-and-pooling"><a href="#5-2-Convolution-and-pooling" class="headerlink" title="5.2 Convolution and pooling"></a>5.2 Convolution and pooling</h4><p>Fully Connected Layer:<br><img src="/assets/blogImg/cs231n/5-27.jpg" width="700"> </p>
+<p>Convolution Layer<br><img src="/assets/blogImg/cs231n/5-31.jpg" width="700"><br>将卷积核和原层对应部分做点乘再相加。<br>[32<em>32</em>3]x[5<em>5</em>3] —&gt; [28<em>28</em>1]<br>使用不同的卷积核，可以得到多个activation maps<br><img src="/assets/blogImg/cs231n/5-36.jpg" width="700"> </p>
+<p>Example:<br><img src="/assets/blogImg/cs231n/5-40.jpg" width="700"> </p>
+<p>output size: (N - F) / stride + 1<br>Common to zero pad the border: (N + pad_N * 2 - F) / stride + 1<br>零填充的原因：保证全尺寸输出 —&gt; stride=1时，填充(F-1)/2</p>
+<blockquote>
+<p>Examples:<br>Input volume: [32<em>32</em>3]<br>filters: 10 [5<em>5</em>3] with stride1, pad 2<br>Q1: What’s the output volume size?<br>output size = (32+2<em>2-5)/1+1=32<br>so, output volume size = 32</em>32<em>10<br>Q2: Number of parameters in this layer?<br>Each filter has 5</em>5<em>3+1=76 params, one for bias,<br>so total number of parameters is 76</em>10=760</p>
+</blockquote>
+<p>summary:<br><img src="/assets/blogImg/cs231n/5-62.jpg" width="700"> </p>
+<p>Example: CONV layers in Torch and Caffe<br><img src="/assets/blogImg/cs231n/5-64.jpg" width="700"><br><img src="/assets/blogImg/cs231n/5-65.jpg" width="700"> </p>
+<h4 id="5-3-ConvNets-outside-vision"><a href="#5-3-ConvNets-outside-vision" class="headerlink" title="5.3 ConvNets outside vision"></a>5.3 ConvNets outside vision</h4><p>Pooling: 池化<br>目的：降维，减少参数数量；深度不减<br>example: [224<em>224</em>64] —&gt; [112<em>112</em>64]<br><img src="/assets/blogImg/cs231n/5-73.jpg" width="700"><br>max polling 可以表示当前卷积核所在位置的最大受激活程度<br>一般不在池化层填0，因为池化层一般只做降采样<br><img src="/assets/blogImg/cs231n/5-75.jpg" width="700"><br>最后添加一个全连接层和朴素的神经网络相连</p>
+<p>demo: <a href="http://cs.stanford.edu/people/karpathy/convnetjs/demo/cifar10.html" target="_blank" rel="noopener">http://cs.stanford.edu/people/karpathy/convnetjs/demo/cifar10.html</a></p>
+<h3 id="Lecture-6-Training-Neural-Networks-part-I"><a href="#Lecture-6-Training-Neural-Networks-part-I" class="headerlink" title="Lecture 6: Training Neural Networks, part I"></a>Lecture 6: Training Neural Networks, part I</h3><h4 id="6-1-Activation-functions"><a href="#6-1-Activation-functions" class="headerlink" title="6.1 Activation functions"></a>6.1 Activation functions</h4><blockquote>
+<p><strong>1. 画computional graphs</strong><br>函数：$f=Wx$<br>hinge loss: $L_i=\sum\limits_{j\neq y_i}max(0,s_j-s_{y_i}+1)<br>penalty: $R(W)$<br><strong>2. 关于$f$</strong><br>Neural Networks<br>Linear score function: $f=Wx$<br>2-layer Neural Network: $f=W_2max(0,W_1x)$<br>包含若干个线性层，层与层之间通过非线性函数连接实现层的堆叠<br><strong>3. 一种特殊的神经网络—CNN</strong><br>使用卷积层保持输入的空间结构，卷积层是一个权重滤波器，每个权重输出一个激活图，重复产生多个激活图<br><strong>4. 通过优化来选择权重W</strong><br>向负梯度方向更新 mini-batch SGD<br>Loop:<br><strong>Sample</strong> a batch of data<br><strong>Forward</strong> prop it through the graph (network), get loss<br><strong>Backprop</strong> to calculate the gradients<br><strong>Update</strong> the parameters using the gradient<br><strong>5. 训练神经网络</strong></p>
+<ul>
+<li><strong>One time setup</strong><br>activation functions, preprocessing, weight initialization, regularization, gradient checking</li>
+<li><strong>Training dynamics</strong><br>babysitting the learning process, parameter updates, hyperparameter optimization</li>
+<li><strong>Evaluation</strong><br>model ensembles</li>
+</ul>
+</blockquote>
+<h5 id="6-1-1-Sigmoid"><a href="#6-1-1-Sigmoid" class="headerlink" title="6.1.1 Sigmoid"></a>6.1.1 Sigmoid</h5><p>将数字压缩到(0,1)<br>问题：</p>
+<ul>
+<li>当X是很大的正数或很大的负数时，值会很接近1或0，此时更新梯度变化很小，导致梯度消失</li>
+<li>Sigmoid函数的输出不是零中心的，若初始X全为正，梯度也会全为正，这样梯度只会朝向一三象限。</li>
+<li>exp()计算代价较高</li>
+</ul>
+<h5 id="6-1-2-tanh"><a href="#6-1-2-tanh" class="headerlink" title="6.1.2 tanh"></a>6.1.2 tanh</h5><p>将数字压缩到[-1,1]<br>优点：零中心<br>缺点：当X是很大的正数或很大的负数时，值会很接近1或0，此时更新梯度变化很小，导致梯度消失</p>
+<h5 id="6-1-2-ReLU"><a href="#6-1-2-ReLU" class="headerlink" title="6.1.2 ReLU"></a>6.1.2 ReLU</h5><p>$f(x)=max(0,x)$<br>优点：在正轴上不会饱和；计算快；收敛地更快；更具备生物合理性(实证检验)<br>缺点：不是零中心，对于负半轴会出现梯度消失<br>于是人们总喜欢用一些较小的正偏置项来初始化ReLU</p>
+<h5 id="6-1-3-Leaky-ReLU"><a href="#6-1-3-Leaky-ReLU" class="headerlink" title="6.1.3 Leaky ReLU"></a>6.1.3 Leaky ReLU</h5><p>$f(x)=max(0.01x,x)$<br>存在负斜率，在负半轴结果也较好，不会存在梯度消失情况</p>
+<h5 id="6-1-4-PReLU-Parametric"><a href="#6-1-4-PReLU-Parametric" class="headerlink" title="6.1.4 PReLU(Parametric)"></a>6.1.4 PReLU(Parametric)</h5><p>$f(x)=max(\alpha x,x)$<br>将$\alpha$设置为一个超参数，通过学习得到，增加了灵活性</p>
+<h5 id="6-1-5-Exponential-Linear-Units-ELU"><a href="#6-1-5-Exponential-Linear-Units-ELU" class="headerlink" title="6.1.5 Exponential Linear Units(ELU)"></a>6.1.5 Exponential Linear Units(ELU)</h5><p>$f(x) =<br>    \begin{cases}<br>    0, &amp;\text{if $x&gt;0$}\\<br>    \alpha (exp(x)-1), &amp;\text{if $x\leq 0$}<br>    \end{cases}$<br>使得均值更接近于0，但是使得负半轴的非系统偏差更容易被保留<br>缺点：exp()计算复杂 </p>
+<h5 id="6-1-6-Maxout-“Neuron”"><a href="#6-1-6-Maxout-“Neuron”" class="headerlink" title="6.1.6 Maxout “Neuron”"></a>6.1.6 Maxout “Neuron”</h5><p>$f(x)=max(x_1^Tx+b_1,x_2^Tx+b_2)$<br>问题：参数个数加倍</p>
+<blockquote>
+<p>TLDR: In practice: </p>
+<ul>
+<li>Use ReLU. Be careful with your learning rates </li>
+<li>Try out Leaky ReLU / Maxout / ELU </li>
+<li>Try out tanh but don’t expect much</li>
+<li>Don’t use sigmoid</li>
+</ul>
+</blockquote>
+<h4 id="6-2-Data-Preprocessing"><a href="#6-2-Data-Preprocessing" class="headerlink" title="6.2 Data Preprocessing"></a>6.2 Data Preprocessing</h4><p>对数据-样本均值，变成零中心数据，这样在第一层输入解决了零均值问题，然而在之后的层中，非零均值的问题更加严重了，所以还是没有解决sigmiod的问题。</p>
+<h4 id="6-3-Weight-Initialization"><a href="#6-3-Weight-Initialization" class="headerlink" title="6.3 Weight Initialization"></a>6.3 Weight Initialization</h4><p>First idea: $W=np.random.randn(fan_in,fan_out)*0.01$<br><img src="/assets/blogImg/cs231n/6-44.jpg" width="700"><br><img src="/assets/blogImg/cs231n/6-46.jpg" width="700"><br>每一层均值基本为0，方差越来越小<br>问题：最后所有激活值都变成了0</p>
+<p>Second Idea: np.random.randn(fan_in,fan_out)*1.0 如果改变初始化比例的大小，将0.01改成1.0，则W中的数总是过大，导致模型总是处于饱和状态(趋于+1/-1)，从而使得所有的梯度趋于0而不再更新<br><img src="/assets/blogImg/cs231n/6-47.jpg" width="700"></p>
+<p>Third Idea: “Xavier initialization”<br>$W=np.random.randn(fan_in,fan_out)/np.sqrt(fan_in)$<br>即单位高斯权值<br>问题：如果使用ReLU，由于将一半的数调整为了0，方差也减小了一半，于是数据又会趋向于0</p>
+<p>Fourth Idea: note additional /2<br>$W=np.random.randn(fan_in,fan_out)/np.sqrt(fan_in/2)$</p>
+<h4 id="6-4-batch-normalization"><a href="#6-4-batch-normalization" class="headerlink" title="6.4 batch normalization"></a>6.4 batch normalization</h4>
       
 
       
@@ -383,7 +444,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Lecture-1-Course-Introduction-slice"><span class="toc-number">1.</span> <span class="toc-text">Lecture 1: Course Introduction [slice]</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-Computer-vision-overview"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 Computer vision overview</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-Historical-context"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 Historical context</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-Course-logistics"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 Course logistics</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lecture-2-Image-Classification"><span class="toc-number">2.</span> <span class="toc-text">Lecture 2: Image Classification</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-The-data-driven-approach"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 The data-driven approach</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-K-nearest-neighbor-notes"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 K-nearest neighbor [notes]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-Linear-classification-I-notes"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 Linear classification I [notes]</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lecture-3-Loss-Functions-and-Optimization"><span class="toc-number">3.</span> <span class="toc-text">Lecture 3: Loss Functions and Optimization</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-Linear-classification-II"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 Linear classification II</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-Higher-level-representations-image-features"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 Higher-level representations, image features</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-Optimization-stochastic-gradient-descent"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 Optimization, stochastic gradient descent</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#并没有听懂"><span class="toc-number">3.4.</span> <span class="toc-text">[并没有听懂]</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lecture-4-Introduction-to-Neural-Networks"><span class="toc-number">4.</span> <span class="toc-text">Lecture 4: Introduction to Neural Networks</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-Backpropagation"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 Backpropagation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-Multi-layer-Perceptrons"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 Multi-layer Perceptrons</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-The-neural-viewpoint"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 The neural viewpoint</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Lecture-1-Course-Introduction-slice"><span class="toc-number">1.</span> <span class="toc-text">Lecture 1: Course Introduction [slice]</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-Computer-vision-overview"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 Computer vision overview</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-Historical-context"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 Historical context</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-Course-logistics"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 Course logistics</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lecture-2-Image-Classification"><span class="toc-number">2.</span> <span class="toc-text">Lecture 2: Image Classification</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-The-data-driven-approach"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 The data-driven approach</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-K-nearest-neighbor-notes"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 K-nearest neighbor [notes]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-Linear-classification-I-notes"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 Linear classification I [notes]</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lecture-3-Loss-Functions-and-Optimization"><span class="toc-number">3.</span> <span class="toc-text">Lecture 3: Loss Functions and Optimization</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-Linear-classification-II"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 Linear classification II</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-Higher-level-representations-image-features"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 Higher-level representations, image features</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-Optimization-stochastic-gradient-descent"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 Optimization, stochastic gradient descent</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#并没有听懂"><span class="toc-number">3.4.</span> <span class="toc-text">[并没有听懂]</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lecture-4-Introduction-to-Neural-Networks"><span class="toc-number">4.</span> <span class="toc-text">Lecture 4: Introduction to Neural Networks</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-Backpropagation"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 Backpropagation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-Multi-layer-Perceptrons"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 Multi-layer Perceptrons</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-The-neural-viewpoint"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 The neural viewpoint</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lecture-5-Convolutional-Neural-Networks"><span class="toc-number">5.</span> <span class="toc-text">Lecture 5: Convolutional Neural Networks</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1-History"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 History</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-Convolution-and-pooling"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 Convolution and pooling</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-3-ConvNets-outside-vision"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 ConvNets outside vision</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lecture-6-Training-Neural-Networks-part-I"><span class="toc-number">6.</span> <span class="toc-text">Lecture 6: Training Neural Networks, part I</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-Activation-functions"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 Activation functions</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#6-1-1-Sigmoid"><span class="toc-number">6.1.1.</span> <span class="toc-text">6.1.1 Sigmoid</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-1-2-tanh"><span class="toc-number">6.1.2.</span> <span class="toc-text">6.1.2 tanh</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-1-2-ReLU"><span class="toc-number">6.1.3.</span> <span class="toc-text">6.1.2 ReLU</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-1-3-Leaky-ReLU"><span class="toc-number">6.1.4.</span> <span class="toc-text">6.1.3 Leaky ReLU</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-1-4-PReLU-Parametric"><span class="toc-number">6.1.5.</span> <span class="toc-text">6.1.4 PReLU(Parametric)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-1-5-Exponential-Linear-Units-ELU"><span class="toc-number">6.1.6.</span> <span class="toc-text">6.1.5 Exponential Linear Units(ELU)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-1-6-Maxout-“Neuron”"><span class="toc-number">6.1.7.</span> <span class="toc-text">6.1.6 Maxout “Neuron”</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-2-Data-Preprocessing"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 Data Preprocessing</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-3-Weight-Initialization"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 Weight Initialization</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-4-batch-normalization"><span class="toc-number">6.4.</span> <span class="toc-text">6.4 batch normalization</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -528,6 +589,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">阅读札记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
@@ -540,15 +605,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">深度学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">阅读札记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">韩语</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">深度学习</a>
               </li>
             
             <div class="clearfix"></div>
