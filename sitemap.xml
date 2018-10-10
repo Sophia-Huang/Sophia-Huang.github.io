@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/01/01/plug/</loc>
+    
+    <lastmod>2018-10-10T12:53:11.628Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/09/28/video-cs231n-%E6%9D%8E%E9%A3%9E%E9%A3%9E/</loc>
+    
+    <lastmod>2018-10-10T05:50:33.702Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/10/09/LintCode-0174-remove-nth-node-from-end-of-list/</loc>
     
     <lastmod>2018-10-10T01:39:22.778Z</lastmod>
@@ -16,23 +30,9 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/09/28/video-cs231n-%E6%9D%8E%E9%A3%9E%E9%A3%9E/</loc>
-    
-    <lastmod>2018-10-09T08:10:39.591Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2018/01/01/my-2018/</loc>
     
     <lastmod>2018-10-08T12:52:02.999Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/12/01/plug/</loc>
-    
-    <lastmod>2018-10-06T14:49:23.990Z</lastmod>
     
   </url>
   
