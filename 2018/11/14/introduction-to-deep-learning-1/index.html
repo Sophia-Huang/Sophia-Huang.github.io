@@ -6,15 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018 | yulin的博客</title>
+  <title>深度学习进阶之路1.1|深度学习的介绍 | yulin的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="yulin的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2018/page/2/index.html">
+  <meta name="description" content="本文主要讲述深度学习的基本概念，依托于台湾大学李宏毅教授《一天搞懂深度学习》的逻辑框架。本篇是此系列的第一篇，对机器学习进行简单的介绍。">
+<meta name="keywords" content="深度学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深度学习进阶之路1.1|深度学习的介绍">
+<meta property="og:url" content="http://yoursite.com/2018/11/14/introduction-to-deep-learning-1/index.html">
 <meta property="og:site_name" content="yulin的博客">
+<meta property="og:description" content="本文主要讲述深度学习的基本概念，依托于台湾大学李宏毅教授《一天搞懂深度学习》的逻辑框架。本篇是此系列的第一篇，对机器学习进行简单的介绍。">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/hungyiLee/1.1.4.1.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/hungyiLee/1.1.4.2.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/hungyiLee/1.1.4.3.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/hungyiLee/1.1.4.4.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/hungyiLee/1.1.4.5.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/hungyiLee/1.1.4.6.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/hungyiLee/1.1.4.7.png">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/hungyiLee/1.1.4.8.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/hungyiLee/1.1.6.1.jpg">
+<meta property="og:updated_time" content="2018-11-14T13:07:25.274Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yulin的博客">
+<meta name="twitter:title" content="深度学习进阶之路1.1|深度学习的介绍">
+<meta name="twitter:description" content="本文主要讲述深度学习的基本概念，依托于台湾大学李宏毅教授《一天搞懂深度学习》的逻辑框架。本篇是此系列的第一篇，对机器学习进行简单的介绍。">
+<meta name="twitter:image" content="http://yoursite.com/assets/blogImg/hungyiLee/1.1.4.1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="yulin的博客" type="application/atom+xml">
   
@@ -144,449 +159,193 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-introduction-to-deep-learning-1" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      深度学习进阶之路1.1|深度学习的介绍
+    </h1>
+  
+
+        
+        <a href="/2018/11/14/introduction-to-deep-learning-1/" class="archive-article-date">
+  	<time datetime="2018-11-14T12:35:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-14</time>
+</a>
+		
+        
+          <div style="margin-top:6px;color:#ABABAB">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">2.6k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">9分</span>
+      </span>
+    </span>
+</div>
+          
+      </header>
     
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本文主要讲述深度学习的基本概念，依托于台湾大学李宏毅教授<a href="https://www.slideshare.net/tw_dsconf/ss-62245351" target="_blank" rel="noopener">《一天搞懂深度学习》</a>的逻辑框架。<br>本篇是此系列的第一篇，对机器学习进行简单的介绍。<br><a id="more"></a></p>
+<blockquote>
+<p>全部章节：<br><a href="https://www.yulinhuang.top/2018/11/14/introduction-to-deep-learning-1/" target="_blank" rel="noopener">深度学习的介绍</a><br><a href="https://www.yulinhuang.top/2018/11/14/introduction-to-deep-learning-2/" target="_blank" rel="noopener">训练深度学习网络的一些小技巧</a><br><a href="https://www.yulinhuang.top/2018/11/14/introduction-to-deep-learning-3/" target="_blank" rel="noopener">各种神经网络介绍</a><br><a href="https://www.yulinhuang.top/2018/11/14/introduction-to-deep-learning-4/" target="_blank" rel="noopener">深度学习的应用与展望</a></p>
+</blockquote>
+<h3 id="1-深度学习的介绍"><a href="#1-深度学习的介绍" class="headerlink" title="1 深度学习的介绍"></a>1 深度学习的介绍</h3><h4 id="1-1-深度学习简介"><a href="#1-1-深度学习简介" class="headerlink" title="1.1 深度学习简介"></a>1.1 深度学习简介</h4><h5 id="1-1-1-深度学习的常见应用"><a href="#1-1-1-深度学习的常见应用" class="headerlink" title="1.1.1 深度学习的常见应用"></a>1.1.1 深度学习的常见应用</h5><ul>
+<li>语音识别</li>
+<li>图像识别</li>
+<li>下围棋(Alpha Go)</li>
+<li>对话系统</li>
+</ul>
+<h5 id="1-1-2-深度学习的目标"><a href="#1-1-2-深度学习的目标" class="headerlink" title="1.1.2 深度学习的目标"></a>1.1.2 深度学习的目标</h5><p>机器学习的目标在于，寻找一个函数$f$，将输入数据映射到输出数据。例如：<br>语音识别将一段音频的输入映射到对应的文字输出；<br>图像识别将一个图片的输入映射到对应的类别输出；<br>围棋系统将历史的对弈数据输入映射到下一步棋决策的输出；<br>对话系统将上一句文本内容的输入映射到系统回答的输出。</p>
+<p>而深度学习的目标在于，寻找一个框架，即一系列的函数模型$f_i$，利用训练数据进行拟合，再根据训练效果从中挑选出最优的模型。</p>
+<h5 id="1-1-3-深度学习的三个步骤"><a href="#1-1-3-深度学习的三个步骤" class="headerlink" title="1.1.3 深度学习的三个步骤"></a>1.1.3 深度学习的三个步骤</h5><ol>
+<li><a href="#jump1">定义一组函数</a></li>
+<li><a href="#jump2">模型和数据的拟合</a></li>
+<li><a href="#jump3">选择最优函数</a></li>
+</ol>
+<h5 id="1-1-4-定义一组函数：神经网络"><a href="#1-1-4-定义一组函数：神经网络" class="headerlink" title="1.1.4 定义一组函数：神经网络 "></a>1.1.4 <span id="jump1">定义一组函数：神经网络 </span></h5><p><strong>1. 神经网络的基本结构：神经元</strong></p>
+<p>人脑的一个神经元通常具有多个<code>树突</code>，用于接收传入的信息；这些树突连接着一条<code>轴突</code>，轴突尾端有许多轴突末梢，与其他多个神经元之间产生连接，从而传递信息。这个连接位置在生物学上称为<code>突触</code>。<br>其行状结构如下：<br><img src="/assets/blogImg/hungyiLee/1.1.4.1.jpg" width="700"></p>
+<p>类似的，神经元模型是一个包含输入、输出和计算功能的模型。其输入可以类比为生物神经元的树突，输出可以类比为生物神经元的轴突，计算则可以类比为细胞核。</p>
+<p>下图是一个典型的神经元模型：包括3个输入，1个输出，两个计算功能。<br><img src="/assets/blogImg/hungyiLee/1.1.4.2.jpg" width="700"></p>
+<p>当确定输入、权重、偏差的值以及激活函数的形式后，我们可以通过如上计算图计算出输出a。一个简单的例子如下：<br><img src="/assets/blogImg/hungyiLee/1.1.4.3.jpg" width="700"></p>
+<p><strong>2. 神经网络的概念</strong></p>
+<p>将不同的神经元连接起来形成的网络结构就是神经网络。需要注意的是，每个神经网络都可能拥有不同的权重和偏差值，且不同的连接方式也会导致不同的网络结构。权重和偏差都是神经网络的参数$\theta$。<br><img src="/assets/blogImg/hungyiLee/1.1.4.4.jpg" width="700"></p>
+<p><strong>3. 一种最简单的神经网络：完全连接前馈神经网络</strong></p>
+<p>前馈神经网络是一种最简单的神经网络，各神经元分层排列。每个神经元只与前一层的神经元相连。接收前一层的输出，并输出给下一层．各层间没有反馈。<br>完全连接前馈神经网络指的是各层神经元之间是全连接的。<br>下图是一个简单的例子：<br><img src="/assets/blogImg/hungyiLee/1.1.4.5.jpg" width="700"></p>
+<p><strong>4. 层的性质</strong></p>
+<p>输入层和输出层通常只有一个，但隐含层可以有很多个。隐含层的个数体现了深度学习的“深度”。</p>
+<blockquote>
+<h6 id="TODO：ImageNet网络层深度介绍"><a href="#TODO：ImageNet网络层深度介绍" class="headerlink" title="TODO：ImageNet网络层深度介绍"></a>TODO：ImageNet网络层深度介绍</h6></blockquote>
+<p>对于分类问题，我们需要将输出层的输出映射到标签类别上。常见的一个做法是使用softmax函数作为输出层。它的基本原理是利用指数函数$e^x$，输出一个列表，保证所有数属于[0, 1]且和为1，从而表示该对象属于各个类别的概率。最后，我们选择概率数值最大的类别作为我们的预测标签。<br><img src="/assets/blogImg/hungyiLee/1.1.4.6.jpg" width="700"></p>
+<p><strong>5. 一个简单例子：手写数字识别</strong></p>
+<p>MNIST是深度学习入门的一个经典数据集，kaggle上提供了一个基于此数据集的训练项目<a href="https://www.kaggle.com/c/digit-recognizer" target="_blank" rel="noopener">Digit Recognizer</a>。<br>MNIST数据集主要是由一些手写数字图片所代表的像素值和图片相应的标签组成。图片一共有十类，分别对应0~9这10个阿拉伯数字。<br>我们的目标是根据训练集中已有的图片像素属性和标签，对测试集中的图片样本的标签进行预测。<br>下图是MNIST数据集中一个图片样本：<br><img src="/assets/blogImg/hungyiLee/1.1.4.7.png" width="700"><br>一种可行的方法是，将$(28 \times 28)$个像素值矩阵拉长成一个$(784 \times 1)$维列向量作为输入层，经过一些隐含层后，与一个softmax输出层相连，输出一个$(10 \times 1)$的列向量，其中每个数值代表了该样本属于0~9中各个数字标签的概率。<br>我们根据训练集中的真实标签反向求出各层网络各个神经元的最优参数$\theta$，并将训练得的网络模型应用在测试集上得出预测标签。<br><img src="/assets/blogImg/hungyiLee/1.1.4.8.jpg" width="700"></p>
+<h5 id="1-1-5-模型和数据的拟合：以MNIST为例"><a href="#1-1-5-模型和数据的拟合：以MNIST为例" class="headerlink" title="1.1.5 模型和数据的拟合：以MNIST为例"></a>1.1.5 <span id="jump2">模型和数据的拟合：以MNIST为例</span></h5><p><strong>1. 训练数据</strong></p>
+<p>图片的像素值矩阵与每张图片对应的标签。</p>
+<p><strong>2. 学习目标</strong></p>
+<p>对于训练数据，我们希望每个样本通过神经网络模型得出的概率列表中，真实标签拥有最大的概率值。也就是说，对于真实标签为3的样本，我们希望通过softmax得出的概率列表尽可能地接近$[0, 0, 1, 0, \dots]$。</p>
+<p>我们将通过神经网络输出的概率向量与最优概率向量之间的差别定义为损失$l$。将所有样本的损失加和得总损失$L=\sum\limits_{k=1}^nl_k$，我们的目标为：找到一个函数，使得总损失$L$最小，也即找到一组参数$\theta$使得总损失函数$L$最小。</p>
+<blockquote>
+<h6 id="TODO-损失函数的选择"><a href="#TODO-损失函数的选择" class="headerlink" title="TODO: 损失函数的选择"></a>TODO: 损失函数的选择</h6></blockquote>
+<h5 id="1-1-6-选择最优函数"><a href="#1-1-6-选择最优函数" class="headerlink" title="1.1.6 选择最优函数"></a>1.1.6 <span id="jump3">选择最优函数</span></h5><p><strong>1. 概述</strong></p>
+<p>其实我们总能列举所有的值，暴力搜索出最好的一组参数$\theta=\{w_1, w_2, \dots, b_1, b_2, \dots \}$。但是这种方法的效率极为低下，对于一个输入和输出均有1000个神经元的全连接网络层，我们就有$10^6$个参数需要拟合。因而在深度神经网络中，暴力搜索几乎是不可能的。</p>
+<p>由于损失函数是我们自己定义的，我们总可以将其设置为凸函数或者近似凸函数，于是便可以利用运筹学的知识，提高我们的搜索效率，更快地找到全局最优解，或者退而求其次地找到可行且效果接近全局最优解的局部最优解。</p>
+<p>梯度下降是神经网络模型训练中最常用的一种优化算法。</p>
+<p><strong>2. 梯度下降法</strong></p>
+<p>首先，选择权重矩阵$W$的初始值。我们直接采用随机定义，或者RBM预训练。</p>
+<p>每次迭代的过程中，我们首先计算出当前状态的梯度，然后从当前状态向负梯度方向移动一个步长单位，达到新的状态。</p>
+<script type="math/tex; mode=display">W_{n+1} \leftarrow W_n - \eta \nabla L(W)</script><p>直到当前梯度接近于0时，我们认为找到了一个局部最优解，并停止训练。</p>
+<p>选取负梯度方向是因为这是梯度下降最快的方向，也即损失函数下降最快的方向。步长即“学习率”，是我们需要事先给定的超参数。学习率太小会导致训练过慢，学习率太高则可能越过最低点而导致更高的损失值。学习率可能是神经网络训练中最重要的超参数设定之一，在调参过程中，我们总是最先确定学习率的值，再确定其他参数。我们既可以选择常数学习率，也可以随着迭代次数的增加逐渐减小学习率，常用的做法有$1/\sqrt{k+1}, 1/\lVert W\rVert ^2$等。</p>
+<blockquote>
+<h6 id="TODO：梯度下降法介绍"><a href="#TODO：梯度下降法介绍" class="headerlink" title="TODO：梯度下降法介绍"></a>TODO：梯度下降法介绍</h6></blockquote>
+<p>以上算法中最消耗计算资源的便是每一次迭代中的求梯度过程。我们自然可以通过极限$\lim\limits_{h \to 0}[f(x+h)-f(x-h)]/2h$来近似求梯度。但是，当网络非常复杂、参数非常多时，每迭代一次都要重新计算非常多次损失函数的梯度，导致计算十分缓慢。一种比较好的改进方法是利用链式法则，用反向传播法求梯度。</p>
+<p><strong>3. 反向传播法</strong></p>
+<p>下面是cs231n关于理解反向传播法的一个小例子。具体笔记见<a href="http://cs231n.github.io/optimization-2/" target="_blank" rel="noopener">链接</a>。<br><img src="/assets/blogImg/hungyiLee/1.1.6.1.jpg" width="700"></p>
+<h4 id="1-2-为什么使用深层网络？"><a href="#1-2-为什么使用深层网络？" class="headerlink" title="1.2 为什么使用深层网络？"></a>1.2 为什么使用深层网络？</h4><p>首先，不是更多的参数就意味着更好的性能，一味地增加网络层数可能会导致更严重的过拟合，反而降低了泛化性能。而参数数量相同的情况下，更瘦更深的网络总是比浅而广的网络效果更好。因为使用诸如ReLU等非线性单元的神经网络在数学上相当于一个分片线性函数，线性区域越多，神经网络的非线性性越强，就有可能取得更好的效果。这就像折纸，越深的网络将纸对折越多次，得到的线性区域也越多。这也是为什么我们称之为“深度学习”而非“广度学习”。<a href="https://www.zhihu.com/question/62705160" target="_blank" rel="noopener">[参考链接1]</a> <a href="https://arxiv.org/pdf/1402.1869.pdf" target="_blank" rel="noopener">[参考链接2]</a> </p>
+<blockquote>
+<p>TODO：模块化</p>
+</blockquote>
+<h4 id="1-3-深度学习简单实战"><a href="#1-3-深度学习简单实战" class="headerlink" title="1.3 深度学习简单实战"></a>1.3 深度学习简单实战</h4><p><strong>1. 定义一组函数</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 建立模型</span></span><br><span class="line">print(<span class="string">'#################### Define Model ##########################'</span>)</span><br><span class="line">model = Sequential()</span><br><span class="line">model.add(Conv2D(filters=<span class="number">32</span>, kernel_size=(<span class="number">5</span>, <span class="number">5</span>), activation=<span class="string">'relu'</span>, input_shape=(<span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>)))</span><br><span class="line">model.add(Conv2D(filters=<span class="number">32</span>, kernel_size=(<span class="number">5</span>, <span class="number">5</span>), activation=<span class="string">'relu'</span>))</span><br><span class="line">model.add(MaxPool2D(pool_size=(<span class="number">2</span>, <span class="number">2</span>)))</span><br><span class="line">model.add(Dropout(<span class="number">0.25</span>))</span><br><span class="line">model.add(Conv2D(filters=<span class="number">64</span>, kernel_size=(<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">'relu'</span>))</span><br><span class="line">model.add(Conv2D(filters=<span class="number">64</span>, kernel_size=(<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">'relu'</span>))</span><br><span class="line">model.add(MaxPool2D(pool_size=(<span class="number">2</span>, <span class="number">2</span>), strides=(<span class="number">2</span>, <span class="number">2</span>)))</span><br><span class="line">model.add(Dropout(<span class="number">0.25</span>))</span><br><span class="line">model.add(Flatten())</span><br><span class="line">model.add(Dense(<span class="number">256</span>, activation=<span class="string">"relu"</span>))</span><br><span class="line">model.add(Dropout(<span class="number">0.5</span>))</span><br><span class="line">model.add(Dense(<span class="number">10</span>, activation=<span class="string">"softmax"</span>))</span><br><span class="line">model.summary()</span><br></pre></td></tr></table></figure>
+<p><strong>2. 模型和数据的拟合</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">loss=<span class="string">'categorical_crossentropy'</span></span><br></pre></td></tr></table></figure>
+<p><strong> 3. 选择最优函数</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 配置模型</span></span><br><span class="line">optimizer = RMSprop(lr=<span class="number">0.001</span>, rho=<span class="number">0.9</span>, epsilon=<span class="number">1e-8</span>, decay=<span class="number">0</span>)</span><br><span class="line">model.compile(loss=<span class="string">'categorical_crossentropy'</span>, optimizer=optimizer, metrics=[<span class="string">'accuracy'</span>])</span><br><span class="line"><span class="comment"># 拟合模型：找到最优参数</span></span><br><span class="line">history = model.fit(x_train, y_train, batch_size=batch_size, epochs=nb_epochs, validation_data=(x_val, y_val), callbacks=[checkpoint], verbose=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<h5 id="TODO：MNIST手写识别"><a href="#TODO：MNIST手写识别" class="headerlink" title="TODO：MNIST手写识别"></a>TODO：MNIST手写识别</h5></blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/21/book-机器学习-周志华/" class="archive-article-date">
-  	<time datetime="2018-09-21T14:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/21/book-机器学习-周志华/">机器学习|周志华</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">深度学习</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/21/hexo-references/" class="archive-article-date">
-  	<time datetime="2018-09-21T13:59:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-21</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/11/11/introduction-to-deep-learning-4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">深度学习进阶之路1|深度学习概论</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/21/hexo-references/">Hexo+Yilia|参考资料</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-深度学习的介绍"><span class="toc-number">1.</span> <span class="toc-text">1 深度学习的介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-深度学习简介"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 深度学习简介</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-1-深度学习的常见应用"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1.1 深度学习的常见应用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-2-深度学习的目标"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.1.2 深度学习的目标</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-3-深度学习的三个步骤"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.1.3 深度学习的三个步骤</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-4-定义一组函数：神经网络"><span class="toc-number">1.1.4.</span> <span class="toc-text">1.1.4 定义一组函数：神经网络 </span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#TODO：ImageNet网络层深度介绍"><span class="toc-number">1.1.4.1.</span> <span class="toc-text">TODO：ImageNet网络层深度介绍</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-5-模型和数据的拟合：以MNIST为例"><span class="toc-number">1.1.5.</span> <span class="toc-text">1.1.5 模型和数据的拟合：以MNIST为例</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#TODO-损失函数的选择"><span class="toc-number">1.1.5.1.</span> <span class="toc-text">TODO: 损失函数的选择</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-6-选择最优函数"><span class="toc-number">1.1.6.</span> <span class="toc-text">1.1.6 选择最优函数</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#TODO：梯度下降法介绍"><span class="toc-number">1.1.6.1.</span> <span class="toc-text">TODO：梯度下降法介绍</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-为什么使用深层网络？"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 为什么使用深层网络？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-深度学习简单实战"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 深度学习简单实战</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#TODO：MNIST手写识别"><span class="toc-number">1.3.1.</span> <span class="toc-text">TODO：MNIST手写识别</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/20/book-python编程-从入门到实践-EricMatthes-袁国忠/" class="archive-article-date">
-  	<time datetime="2018-09-20T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-20</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/20/book-python编程-从入门到实践-EricMatthes-袁国忠/">python编程：从入门到实践|笔记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/19/video-Learn-Korean-lesson-one/" class="archive-article-date">
-  	<time datetime="2018-09-19T10:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/19/video-Learn-Korean-lesson-one/">韩语学习第1课|什么是韩文？한글은 무엇인가?</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">韩语</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/18/book-剑指offer-何海涛/" class="archive-article-date">
-  	<time datetime="2018-09-18T15:59:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/18/book-剑指offer-何海涛/">剑指offer|笔记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/06/LintCode-0372-delete-node-in-a-linked-list/" class="archive-article-date">
-  	<time datetime="2018-09-06T08:45:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/06/LintCode-0372-delete-node-in-a-linked-list/">LintCode第372题|删除链表节点 [简单]</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">LintCode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/06/LintCode-0373-partition-array-by-odd-and-even/" class="archive-article-date">
-  	<time datetime="2018-09-06T07:45:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/06/LintCode-0373-partition-array-by-odd-and-even/">LintCode第373题|奇偶分割数组 [简单]</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">LintCode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/06/LintCode-0038-search-a-2d-matrix-ii/" class="archive-article-date">
-  	<time datetime="2018-09-06T05:45:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/06/LintCode-0038-search-a-2d-matrix-ii/">LintCode第38题|搜索二维矩阵Ⅱ [中等]</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">LintCode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/06/LintCode-0003-digit-counts/" class="archive-article-date">
-  	<time datetime="2018-09-06T03:45:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/06/LintCode-0003-digit-counts/">LintCode第3题|统计数字 [中等]</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">LintCode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/05/LintCode-0040-implement-queue-by-two-stacks/" class="archive-article-date">
-  	<time datetime="2018-09-05T06:45:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/05/LintCode-0040-implement-queue-by-two-stacks/">LintCode第40题|用栈实现队列 [中等]</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">LintCode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2018/">&laquo; Prev</a><a class="page-number" href="/archives/2018/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2018/page/3/">3</a><a class="extend next" rel="next" href="/archives/2018/page/3/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -610,8 +369,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
