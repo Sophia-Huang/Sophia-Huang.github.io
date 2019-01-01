@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2018/12/25/Scores/</loc>
+    <loc>http://yoursite.com/2018/01/01/my-2018/</loc>
     
-    <lastmod>2018-12-25T06:23:04.011Z</lastmod>
+    <lastmod>2019-01-01T10:24:34.091Z</lastmod>
     
   </url>
   
@@ -33,13 +33,6 @@
     <loc>http://yoursite.com/2018/11/14/introduction-to-deep-learning-1/</loc>
     
     <lastmod>2018-11-14T13:12:21.220Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/01/01/my-2018/</loc>
-    
-    <lastmod>2018-11-04T13:13:27.337Z</lastmod>
     
   </url>
   
