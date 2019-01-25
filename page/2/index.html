@@ -320,6 +320,182 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/21/book-机器学习-周志华/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="芸笙"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/images/avatar.jpg"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="玉琳的博客"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2018/09/21/book-机器学习-周志华/" class="post-title-link" itemprop="url">机器学习|周志华</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-09-21 22:00:00" itemprop="dateCreated datePublished" datetime="2018-09-21T22:00:00+08:00">2018-09-21</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-22 12:30:55" itemprop="dateModified" datetime="2018-09-22T12:30:55+08:00">2018-09-22</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+            <span id="/2018/09/21/book-机器学习-周志华/" class="leancloud_visitors" data-flag-title="机器学习|周志华">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="第8章-集成学习"><a href="#第8章-集成学习" class="headerlink" title="第8章 集成学习"></a>第8章 集成学习</h3><h4 id="8-1-个体与集成"><a href="#8-1-个体与集成" class="headerlink" title="8.1 个体与集成"></a>8.1 个体与集成</h4><p>集成学习的一般结构是：先产生一组“个体学习器”(individual learner)，再用某种策略把他们结合起来。</p>
+<p>若集成中只包含同种类型的个体学习器，如“决策树集成”中全是决策树，这样的集成是同质的(homogeneous)。同质集成中的个体学习器也称为“基学习器”(base learner)，相应的学习算法称为“基学习算法”(base learning algorithm)。</p>
+<p>若集成中包含不同类型的个体学习器，如同时包含决策树和神经网络，这样的集成式异质的(heterogeneous)。异质集成中的个体学习器也称为“组件学习器”(component learner)或个体学习器。</p>
+<p>要想获得好的集成，个体学习器应“好而不同”，即个体学习器要有一定的“准确性”(学习器不能太坏)，并且要有“多样性”(学习期间要有差异)。至少需要使用弱学习器，即泛化性能高于随即猜测的学习器，例如二分类问题精度高于50%。</p>
+<blockquote>
+<p>考虑分类问题$y \in \{-1, +1\}$和真实函数$f$，假定基分类器的错误率为$\epsilon$，即对每个基分类器$h_i$有：</p>
+<script type="math/tex; mode=display">P(h_i(x) \neq f(x)) = \epsilon \tag{8.1}</script><p>假设集成通过简单投票法结合$T$个基分类器，若有超过半数的基分类器正确，则判定集成分类为正确，则：</p>
+<script type="math/tex; mode=display">H(x) = sign(\sum\limits_{i=1}^{T}h_i(x)) \tag{8.2}</script><p><strong>假设基分类器的错误率相对独立</strong>，则由Hoeffding不等式可知，集成的错误率为：<br>\begin{align}P(H(x) \neq f(x)) &amp; = \sum\limits_{k=0}^{\left \lfloor T/2 \right \rfloor} \tbinom{T}{k} (1 - \epsilon)^k \epsilon ^{T-k} \\<br>&amp; \leq exp(-\frac{1}{2} T(1-2\epsilon)^2) \tag{8.3}\end{align}<br>结论：随着集成分类器数目$T$的增大，集成的错误率将指数级下降，最后趋向于零。</p>
+</blockquote>
+<p>根据个体学习器的生成方式，目前的集成学习方法大致可以分类两类：<br>一类是个体学习器间存在强依赖关系，必须串行生成的序列化方法，代表是Boosting；<br>另一类是个体学习器间不存在强依赖关系，可同时生成的化方并行化方法，代表是Bagging和随机森林。</p>
+<h4 id="8-2-Boosting"><a href="#8-2-Boosting" class="headerlink" title="8.2 Boosting"></a>8.2 Boosting</h4><p>Boosting族算法的工作机制类似于：先从初始训练集训练出一个基学习器，再根据基学习器的表现对训练样本分布进行调整，使得先前基学习器做错的训练样本在后续受到更多关注，然后基于调整后的样本分布来训练下一个基学习器；如此重复进行，直到基学习器数目达到事先指定的值$T$，最终将这$T$个基学习器进行加权融合。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/20/book-python编程-从入门到实践-EricMatthes-袁国忠/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -566,7 +742,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-01-25 14:28:58" itemprop="dateModified" datetime="2019-01-25T14:28:58+08:00">2019-01-25</time>
+                <time title="修改时间：2019-01-25 19:29:44" itemprop="dateModified" datetime="2019-01-25T19:29:44+08:00">2019-01-25</time>
               
             
           </span>
@@ -1887,180 +2063,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/02/LintCode-0159-find-minimum-in-rotated-sorted-array/"/>
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="芸笙"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="/images/avatar.jpg"/>
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="玉琳的博客"/>
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/09/02/LintCode-0159-find-minimum-in-rotated-sorted-array/" class="post-title-link" itemprop="url">LintCode第159题|寻找旋转排序数组中的最小值 [中等]</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-09-02 14:45:37" itemprop="dateCreated datePublished" datetime="2018-09-02T14:45:37+08:00">2018-09-02</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-09-22 12:19:47" itemprop="dateModified" datetime="2018-09-22T12:19:47+08:00">2018-09-22</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-            <span id="/2018/09/02/LintCode-0159-find-minimum-in-rotated-sorted-array/" class="leancloud_visitors" data-flag-title="LintCode第159题|寻找旋转排序数组中的最小值 [中等]">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="1-问题介绍"><a href="#1-问题介绍" class="headerlink" title="1. 问题介绍"></a>1. 问题介绍</h3><blockquote>
-<p><strong>描述</strong><br>假设一个旋转排序的数组其起始位置是未知的 (比如0 1 2 4 5 6 7 可能变成是4 5 6 7 0 1 2)。<br>你需要找到其中最小的元素。<br>你可以假设数组中不存在重复的元素。<br><strong>样例</strong><br>给出[4,5,6,7,0,1,2]  返回 0<br><a href="https://www.lintcode.com/problem/find-minimum-in-rotated-sorted-array/description" target="_blank" rel="noopener">原题链接</a></p>
-</blockquote>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/09/02/LintCode-0159-find-minimum-in-rotated-sorted-array/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2112,7 +2114,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">27</span>
+                    <span class="site-state-item-count">28</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2733,6 +2735,8 @@
   
     
       
+        
+      
     
       
     
@@ -2754,6 +2758,43 @@
     
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+      for (i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+  overflow: auto hidden;
+}
+</style>
+
+    
   
 
 
